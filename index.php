@@ -8,6 +8,14 @@ $utente1 = new User("Agatha", "Christie", "agch@gmail.com", "tenlittleindians");
 $utente1->setAge(20);
 var_dump($utente1);
 
+$vip1 = new Gold("Amelia Mary", "Earhart", "amyhh@fly.com", "itasca", "10EElectra");
+var_dump($vip1);
+
+$prodotto1 = new Product("Anj-Series Acacia", 3500);
+$prodotto1 -> setDiscount(20);
+var_dump($prodotto1);
+
+
 ?>
 
 
@@ -20,6 +28,7 @@ var_dump($utente1);
     <title>shopping oop</title>
 </head>
 <body>
-    
+    <hr>
+    <p>prezzo finale ukulele: <?php echo $prodotto1->getFinalPrice() ?>₱</p>
 </body>
 </html>

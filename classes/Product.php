@@ -4,12 +4,13 @@ class Product {
     private $name;
     private $category;
     private $type;
-    private $barCode;
+    private $price;
+    private $discount;
 
-    function __construct($_name, $_barCode)
+    function __construct($_name, $_price)
     {
         $this->name = $_name;
-        $this->barCode = $_barCode;
+        $this->price = $_price;
     }
 
     //SETTER
@@ -25,8 +26,12 @@ class Product {
         $this->type = $_type;
     }
 
-    public function setBarCode($_barCode){
-        $this->barCode = $_barCode;
+    public function setPrice($_price){
+        $this->price = $_price;
+    }
+
+    public function setDiscount($_discount){
+        $this->discount = $_discount;
     }
     
     //GETTER
@@ -38,7 +43,16 @@ class Product {
         return $this->category;
     }
     
-    public function getBarCode(){
-        return $this->barCode;
+    public function getPrice(){
+        return $this->price;
+    }
+
+    public function getDiscount(){
+        $this->discount;
+    }
+
+    public function getFinalPrice(){
+        $finalPrice = $this->price - (($this->price * $this->discount) / 100);
+        return number_format($finalPrice, 2, ",", ".");
     }
 }
