@@ -65,4 +65,15 @@ class User {
     public function getDiscount(){
         return $this->discount;
     }
+
+
+
+    public function checkEmail(){
+        if (filter_var($this->email, FILTER_VALIDATE_EMAIL)) {
+            echo "il tuo indirizzo è valido";
+        } else {
+            echo "l'indirizzo email che hai inserito non è valido!!!";
+        }
+    }
+    
 }
