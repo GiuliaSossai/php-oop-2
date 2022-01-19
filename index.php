@@ -17,6 +17,11 @@ $vip1 = new Gold("itasca", "Amelia Mary", "Earhart", "amyhh@fly.com", "10EElectr
 $vip1->setDiscount(30);
 //$vip1->checkEmail();
 $vip1->setCreditCard("Amelia", 12345, 456456456456, 2030, 321);
+$vip1->street = "Terrace Street";
+$vip1->streetNumber = 223;
+$vip1->zipcode = 66002;
+$vip1->town = "Atchison";
+$vip1->country = "Kansas (US)";
 var_dump($vip1);
 
 $prodotto1 = new Product("Anj-Series Acacia", 3500);

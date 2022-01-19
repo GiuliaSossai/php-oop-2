@@ -1,13 +1,15 @@
 <?php
 
 require_once __DIR__ . "/CreditCard.php";
+require_once __DIR__ . "/Address.php";
 
 class User {
+    use Address;
+    
     private $name;
     private $lastname;
     private $email;
     private $age;
-    private $address;
     private $id;
     private $password;
     private $creditCard;
@@ -77,7 +79,7 @@ class User {
     }
 
     public function getCreditCard(){
-        $this->creditCard = $_creditCard;
+        return $this->creditCard;
     }
 
 
