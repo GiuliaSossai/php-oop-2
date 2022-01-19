@@ -1,6 +1,7 @@
 <?php
 
 require_once __DIR__ . "/classes/Product.php";
+require_once __DIR__ . "/shop.php";
 require_once __DIR__ . "/classes/User.php";
 require_once __DIR__ . "/classes/Gold.php";
 require_once __DIR__ . "/classes/Order.php";
@@ -23,7 +24,7 @@ var_dump($prodotto1);
 $ordine1 = new Order(13, 432);
 var_dump($ordine1);
 
-$carta1 = new CreditCard("Agata", 34566);
+$carta1 = new CreditCard("Agata", 34566, 123456789123, 2025, 456);
 $carta1->setExpirationDate(1992);
 var_dump($carta1);
 
