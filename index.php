@@ -10,11 +10,13 @@ require_once __DIR__ . "/classes/CreditCard.php";
 $utente1 = new User("Agatha", "Christie", "agch@gmail.com", "tenlittleindians");
 $utente1->setAge(20);
 //$utente1->checkEmail();
+$utente1->setCreditCard("Agata", 10101, 192038475638, 2024, 100);
 var_dump($utente1);
 
 $vip1 = new Gold("itasca", "Amelia Mary", "Earhart", "amyhh@fly.com", "10EElectra");
 $vip1->setDiscount(30);
 //$vip1->checkEmail();
+$vip1->setCreditCard("Amelia", 12345, 456456456456, 2030, 321);
 var_dump($vip1);
 
 $prodotto1 = new Product("Anj-Series Acacia", 3500);

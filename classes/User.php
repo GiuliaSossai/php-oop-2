@@ -1,5 +1,7 @@
 <?php
 
+require_once __DIR__ . "/CreditCard.php";
+
 class User {
     private $name;
     private $lastname;
@@ -44,6 +46,14 @@ class User {
         $this->discount = $_discount;
     }
 
+    public function setCreditCard($_owner, $_code, $_cardId, $_expirationDate, $_cvv){
+        try {
+            $this->creditCard = new CreditCard($_owner, $_code, $_cardId, $_expirationDate, $_cvv);
+        } catch (Exception $e) {
+            echo $e->getMessage();
+        }
+    }
+
 
     //GETTER
     public function getName(){
@@ -66,6 +76,10 @@ class User {
         return $this->discount;
     }
 
+    public function getCreditCard(){
+        $this->creditCard = $_creditCard;
+    }
+
 
 
     public function checkEmail(){
@@ -75,5 +89,7 @@ class User {
             echo "l'indirizzo email che hai inserito non è valido!!!";
         }
     }
+
+    
     
 }
